@@ -1,0 +1,50 @@
+.acercar{
+    overflow: hidden;
+}
+.acercar img{
+    height: 300px;
+    width: 300px;
+    transition: all 2s;
+}
+.acercar:hover img{
+    transform: scale(1.5);
+}
+
+.col{
+    display: flex;
+    justify-content: center;
+    height: 500px;
+}
+
+@media(min-width: 1024px){
+    .proteina{
+        grid-area: proteina;
+    }
+    .aminoacidos{
+        grid-area: aminoacidos;
+    }
+    .creatina{
+        grid-area: creatina;
+    }
+    .barras{
+        grid-area: barras;
+    }
+    .mancuernas{
+        grid-area: mancuernas;
+    }
+    .discos{
+        grid-area: discos;
+    }
+
+    .grillaProductos{
+        display: grid;
+        align-items: center;
+        grid-template-areas: 
+        
+        "proteina aminoacidos creatina"
+        "barras   mancuernas  discos  "
+        ;
+    }
+}
+
+

@@ -4,11 +4,6 @@
   padding: 0;
 }
 
-body {
-  font-family: "Poppins", sans-serif;
-}
-
-/* FOOTER */
 footer {
   background-color: rgba(20, 90, 95, 0.771);
   display: flex;
@@ -24,7 +19,14 @@ footer {
   padding: 5px;
 }
 
-/* MAIN INDEX */
+.bg {
+  background-color: rgba(20, 90, 95, 0.771);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
 .col {
   margin: 10px;
 }
@@ -55,13 +57,51 @@ footer {
   transform: scale(1.5);
 }
 
-/* MAIN PRODUCTOS 
-*/
-.bg {
-  background-color: rgba(20, 90, 95, 0.771);
+.acercar {
+  overflow: hidden;
 }
 
-/*MAIN NOSOTROS*/
+.acercar img {
+  height: 300px;
+  width: 300px;
+  transition: all 2s;
+}
+
+.acercar:hover img {
+  transform: scale(1.5);
+}
+
+.col {
+  display: flex;
+  justify-content: center;
+  height: 500px;
+}
+
+@media (min-width: 1024px) {
+  .proteina {
+    grid-area: proteina;
+  }
+  .aminoacidos {
+    grid-area: aminoacidos;
+  }
+  .creatina {
+    grid-area: creatina;
+  }
+  .barras {
+    grid-area: barras;
+  }
+  .mancuernas {
+    grid-area: mancuernas;
+  }
+  .discos {
+    grid-area: discos;
+  }
+  .grillaProductos {
+    display: grid;
+    align-items: center;
+    grid-template-areas: "proteina aminoacidos creatina" "barras   mancuernas  discos  ";
+  }
+}
 header {
   grid-area: header;
 }
@@ -83,7 +123,6 @@ footer {
   display: grid;
 }
 
-/* MAIN CONTACTO*/
 .mediosDePago {
   grid-area: mediosDePago;
 }
@@ -106,31 +145,10 @@ footer {
 
 .grillaAyuda {
   display: grid;
-  grid-template-areas: "mediosDePago" "envios" "calculoEnvio" "pregFrecuentes" "publicidad";
+  grid-template-areas: "publicidad" "mediosDePago" "envios" "calculoEnvio" "pregFrecuentes";
 }
 
-.mediosDePago {
-  padding: 15%;
-  margin-left: 20px;
-  margin-right: 20px;
-  border-bottom: 2px inset black;
-}
-
-.envios {
-  padding: 15%;
-  margin-left: 20px;
-  margin-right: 20px;
-  border-bottom: 2px inset black;
-}
-
-.calculoEnvio {
-  padding: 15%;
-  margin-left: 20px;
-  margin-right: 20px;
-  border-bottom: 2px inset black;
-}
-
-.pregFrecuentes {
+.mediosDePago, .envios, .calculoEnvio, .pregFrecuentes {
   padding: 15%;
   margin-left: 20px;
   margin-right: 20px;
@@ -155,6 +173,60 @@ footer {
   }
   .mediosDePago, .envios, .calculoEnvio, .pregFrecuentes {
     border: none;
+    padding: 20%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .fondo:hover {
+    background-color: rgba(20, 90, 95, 0.055);
+  }
+}
+.redesSociales {
+  grid-area: redesSociales;
+}
+
+.telefono {
+  grid-area: telefono;
+}
+
+.mail {
+  grid-area: mail;
+}
+
+.publicidad {
+  grid-area: publicidad;
+}
+
+.grillaContacto {
+  display: grid;
+  grid-template-areas: "publicidad" "redesSociales" "telefono" "mail";
+}
+
+.redesSociales, .telefono, .mail {
+  padding: 15%;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-bottom: 2px inset black;
+}
+
+@media (min-width: 600px) {
+  section h3 {
+    font-size: 45px;
+  }
+}
+@media (min-width: 1024px) {
+  .grillaContacto {
+    display: grid;
+    align-items: center;
+    grid-template-areas: "publicidad    publicidad  publicidad" "mail          telefono    redesSociales";
+  }
+  section h3 {
+    font-size: 30px;
+  }
+  .redesSociales, .telefono, .mail {
+    border: none;
+    padding: 20%;
+    margin: 0;
   }
   .fondo:hover {
     background-color: rgba(20, 90, 95, 0.055);

@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+footer{
+    background-color: rgba(20, 90, 95, 0.771);
+    display: flex;
+    
+}
+.redes {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+.redes a{
+    padding: 5px;
+}
+
+.bg{
+    background-color: rgba(20, 90, 95, 0.771);
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}

@@ -1,0 +1,29 @@
+
+.col{
+    margin: 10px;
+}
+
+.h1{
+    font-family: 'Poppins', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(20, 90, 95, 0.771); 
+}
+.h3{
+    font-family: 'Poppins', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(20, 90, 95, 0.771);
+}
+
+.acercar{
+    overflow: hidden;
+
+}
+.acercar img{
+    transition: all 2s;
+}
+.acercar:hover img{
+    transform: scale(1.5);
+}
+

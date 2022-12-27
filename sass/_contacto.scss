@@ -1,0 +1,63 @@
+.redesSociales{
+    grid-area: redesSociales;
+}
+
+.telefono{
+    grid-area: telefono;
+}
+
+.mail{
+    grid-area: mail;
+}
+
+.publicidad{
+    grid-area: publicidad;
+}
+
+.grillaContacto{
+    display: grid;
+
+    grid-template-areas: 
+    "publicidad"
+    "redesSociales"
+    "telefono"
+    "mail";
+}    
+
+.redesSociales, .telefono, .mail{
+    padding: 15%;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-bottom: 2px inset black;
+}
+
+@media (min-width: 600px){
+    section h3{
+        font-size: 45px;
+    }
+}
+
+@media (min-width: 1024px){
+    .grillaContacto{
+        display: grid;
+        align-items: center;
+        grid-template-areas: 
+        "publicidad    publicidad  publicidad"
+        "mail          telefono    redesSociales"
+        ;
+    }
+
+    section h3{
+        font-size: 30px;
+    }
+
+    .redesSociales, .telefono, .mail{
+        border:none;
+        padding: 20%;
+        margin: 0;
+    }
+
+    .fondo:hover{
+        background-color: rgba(20, 90, 95, 0.055);
+    }
+}

@@ -19,9 +19,28 @@ footer{
 }
 
 .bg{
-    background-color: rgba(20, 90, 95, 0.771);
+    @extend .colorstyle;
 }
 
 body{
     font-family: 'Poppins', sans-serif;
+}
+.acercar{
+    overflow: hidden;
+}
+.acercar img{
+    height: 250px;
+    width: 250px;
+    transition: all 2s;
+}
+.acercar:hover img{
+    transform: scale(1.5);
+}
+.col{
+    display: flex;
+    height: 600px;
+    justify-content: center;
+}
+.mb-5{
+    margin-top: 1rem;
 }

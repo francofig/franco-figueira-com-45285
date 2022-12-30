@@ -1,8 +1,3 @@
-
-.col{
-    margin: 10px;
-}
-
 .h1{
     font-family: 'Poppins', sans-serif;
     margin-top: 20px;
@@ -16,14 +11,70 @@
     background-color: rgba(20, 90, 95, 0.771);
 }
 
-.acercar{
-    overflow: hidden;
 
+.suplementos{
+    grid-area: suplementos;
 }
-.acercar img{
-    transition: all 2s;
+.accesorios{
+    grid-area: accesorios;
 }
-.acercar:hover img{
-    transform: scale(1.5);
+.ofertas{
+    grid-area: ofertas;
 }
+@media(min-width: 530px) {
+    .publicidad {
+        height: 100%;
+    }
+
+    .grillaIndex{
+        display: grid;
+        align-items: center;
+        .publicidad{
+        width: 100%;
+        }
+        grid-template-areas:
+            "publicidad   suplementos"
+            "publicidad   accesorios"
+            "publicidad   ofertas"
+        ;
+    }
+}
+@media(min-width:700px) {
+    .publicidad {
+        width: 100%;
+        height: 100%;
+    }
+
+    .grillaIndex {
+        display: grid;
+        align-items: center;
+        grid-template-areas:
+            "publicidad   publicidad"
+            "suplementos  accesorios"
+            "ofertas                "
+        ;
+    }
+}
+@media(min-width: 1024px){
+    
+
+    .grillaIndex{
+        display: grid;
+        align-items: center;
+        grid-template-areas: 
+        "publicidad    publicidad   publicidad"
+        "suplementos   accesorios   ofertas "
+        ;
+    }
+}
+// @media (min-width: 1245px){
+//     .grillaIndex{
+//         display: grid;
+//         align-items: center;
+//         grid-template-areas: 
+//         "publicidad   publicidad   publicidad   publicidad"
+//         "proteina     creatina     aminoacidos       otros"
+//         ;
+//     }
+// }
 

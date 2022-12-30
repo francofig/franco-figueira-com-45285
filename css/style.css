@@ -19,16 +19,36 @@ footer {
   padding: 5px;
 }
 
-.bg {
-  background-color: rgba(20, 90, 95, 0.771);
-}
-
 body {
   font-family: "Poppins", sans-serif;
 }
 
+.acercar {
+  overflow: hidden;
+}
+
+.acercar img {
+  height: 250px;
+  width: 250px;
+  transition: all 2s;
+}
+
+.acercar:hover img {
+  transform: scale(1.5);
+}
+
 .col {
-  margin: 10px;
+  display: flex;
+  height: 600px;
+  justify-content: center;
+}
+
+.mb-5 {
+  margin-top: 1rem;
+}
+
+.colorstyle, .bg {
+  background-color: rgba(20, 90, 95, 0.771);
 }
 
 .h1 {
@@ -45,84 +65,108 @@ body {
   background-color: rgba(20, 90, 95, 0.771);
 }
 
-.acercar {
-  overflow: hidden;
+.suplementos {
+  grid-area: suplementos;
 }
 
-.acercar img {
-  transition: all 2s;
+.accesorios {
+  grid-area: accesorios;
 }
 
-.acercar:hover img {
-  transform: scale(1.5);
+.ofertas {
+  grid-area: ofertas;
 }
 
-.acercar {
-  overflow: hidden;
-}
-
-.acercar img {
-  height: 300px;
-  width: 300px;
-  transition: all 2s;
-}
-
-.acercar:hover img {
-  transform: scale(1.5);
-}
-
-.col {
-  display: flex;
-  justify-content: center;
-  height: 500px;
-}
-
-@media (min-width: 1024px) {
-  .proteina {
-    grid-area: proteina;
+@media (min-width: 530px) {
+  .publicidad {
+    height: 100%;
   }
-  .aminoacidos {
-    grid-area: aminoacidos;
-  }
-  .creatina {
-    grid-area: creatina;
-  }
-  .barras {
-    grid-area: barras;
-  }
-  .mancuernas {
-    grid-area: mancuernas;
-  }
-  .discos {
-    grid-area: discos;
-  }
-  .grillaProductos {
+  .grillaIndex {
     display: grid;
     align-items: center;
-    grid-template-areas: "proteina aminoacidos creatina" "barras   mancuernas  discos  ";
+    grid-template-areas: "publicidad   suplementos" "publicidad   accesorios" "publicidad   ofertas";
+  }
+  .grillaIndex .publicidad {
+    width: 100%;
   }
 }
-header {
-  grid-area: header;
+@media (min-width: 700px) {
+  .publicidad {
+    width: 100%;
+    height: 100%;
+  }
+  .grillaIndex {
+    display: grid;
+    align-items: center;
+    grid-template-areas: "publicidad   publicidad" "suplementos  accesorios" "ofertas                ";
+  }
+}
+@media (min-width: 1024px) {
+  .grillaIndex {
+    display: grid;
+    align-items: center;
+    grid-template-areas: "publicidad    publicidad   publicidad" "suplementos   accesorios   ofertas ";
+  }
+}
+.proteina {
+  grid-area: proteina;
 }
 
-main {
-  grid-area: main;
+.aminoacidos {
+  grid-area: aminoacidos;
 }
 
-footer {
-  grid-area: footer;
+.creatina {
+  grid-area: creatina;
 }
 
-.grilla {
-  display: grid;
-  grid-template-areas: "header" "main" "footer";
+.otros {
+  grid-area: otros;
 }
 
-.grid_nosotros {
-  display: grid;
+.publicidad {
+  grid-area: publicidad;
 }
 
+@media (min-width: 550px) {
+  .publicidad {
+    width: 100%;
+    height: 100%;
+  }
+  .grillaSuplementos {
+    display: grid;
+    align-items: center;
+    grid-template-areas: "publicidad   creatina" "publicidad   proteina" "publicidad   aminoacidos" "publicidad   otros";
+  }
+  .grillaSuplementos .publicidad {
+    width: 100%;
+  }
+}
+@media (min-width: 700px) {
+  .publicidad {
+    width: 100%;
+    height: 100%;
+  }
+  .grillaSuplementos {
+    display: grid;
+    align-items: center;
+    grid-template-areas: "publicidad   publicidad" "proteina     creatina" "aminoacidos  otros";
+  }
+}
+@media (min-width: 1024px) {
+  .grillaSuplementos {
+    display: grid;
+    align-items: center;
+    grid-template-areas: "publicidad   proteina     creatina" "publicidad   aminoacidos  otros ";
+  }
+}
+@media (min-width: 1245px) {
+  .grillaSuplementos {
+    display: grid;
+    align-items: center;
+    grid-template-areas: "publicidad   publicidad   publicidad   publicidad" "proteina     creatina     aminoacidos       otros";
+  }
+}
 .mediosDePago {
   grid-area: mediosDePago;
 }
@@ -160,7 +204,7 @@ footer {
   background-color: antiquewhite;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 650px) {
   section h3 {
     font-size: 45px;
   }
@@ -230,5 +274,64 @@ footer {
   }
   .fondo:hover {
     background-color: rgba(20, 90, 95, 0.055);
+  }
+}
+.barras {
+  grid-area: barras;
+}
+
+.mancuernas {
+  grid-area: mancuernas;
+}
+
+.discos {
+  grid-area: discos;
+}
+
+.otros {
+  grid-area: otros;
+}
+
+.publicidad {
+  grid-area: publicidad;
+}
+
+@media (min-width: 550px) {
+  .publicidad {
+    width: 100%;
+    height: 100%;
+  }
+  .grillaAccesorios {
+    display: grid;
+    align-items: center;
+    grid-template-areas: "publicidad   barras" "publicidad   mancuernas" "publicidad   discos" "publicidad   otros";
+  }
+  .grillaAccesorios .publicidad {
+    width: 100%;
+  }
+}
+@media (min-width: 700px) {
+  .publicidad {
+    width: 100%;
+    height: 100%;
+  }
+  .grillaAccesorios {
+    display: grid;
+    align-items: center;
+    grid-template-areas: "publicidad   publicidad" "barras       mancuernas" "discos       otros";
+  }
+}
+@media (min-width: 1024px) {
+  .grillaAccesorios {
+    display: grid;
+    align-items: center;
+    grid-template-areas: "publicidad  barras  mancuernas" "publicidad  discos  otros";
+  }
+}
+@media (min-width: 1245px) {
+  .grillaAccesorios {
+    display: grid;
+    align-items: center;
+    grid-template-areas: "publicidad   publicidad   publicidad   publicidad" "barras       mancuernas   discos       otros";
   }
 }/*# sourceMappingURL=style.css.map */

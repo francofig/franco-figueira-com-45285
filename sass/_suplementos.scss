@@ -1,0 +1,75 @@
+.proteina {
+    grid-area: proteina;
+}
+.aminoacidos {
+    grid-area: aminoacidos;
+}
+.creatina {
+    grid-area: creatina;
+}
+.otros{
+    grid-area: otros;
+}
+.publicidad {
+    grid-area: publicidad;
+}
+@media(min-width: 550px) {
+    .publicidad {
+        width: 100%;
+        height: 100%;
+    }
+
+    .grillaSuplementos {
+        display: grid;
+        align-items: center;
+        .publicidad{
+        width: 100%;
+        }
+        grid-template-areas:
+            "publicidad   creatina"
+            "publicidad   proteina"
+            "publicidad   aminoacidos"
+            "publicidad   otros"
+        ;
+    }
+}
+
+@media(min-width:700px){
+    .publicidad {
+        width: 100%;
+        height: 100%;
+    }
+    .grillaSuplementos{
+        display: grid;
+        align-items: center;
+        grid-template-areas:
+            "publicidad   publicidad"
+            "proteina     creatina"
+            "aminoacidos  otros"
+        ;
+    }
+}
+@media(min-width: 1024px){
+    
+
+    .grillaSuplementos{
+        display: grid;
+        align-items: center;
+        grid-template-areas: 
+        "publicidad   proteina     creatina"
+        "publicidad   aminoacidos  otros "
+        ;
+    }
+}
+@media (min-width: 1245px){
+    .grillaSuplementos{
+        display: grid;
+        align-items: center;
+        grid-template-areas: 
+        "publicidad   publicidad   publicidad   publicidad"
+        "proteina     creatina     aminoacidos       otros"
+        ;
+    }
+}
+
+

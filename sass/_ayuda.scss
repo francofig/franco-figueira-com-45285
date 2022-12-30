@@ -1,19 +1,20 @@
-.mediosDePago{
+.mediosDePago {
     grid-area: mediosDePago;
 }
 
-.envios{
+.envios {
     grid-area: envios;
 }
 
-.pregFrecuentes{
+.pregFrecuentes {
     grid-area: pregFrecuentes;
 }
 
-.calculoEnvio{
+.calculoEnvio {
     grid-area: calculoEnvio;
 }
-.publicidad{
+
+.publicidad {
     grid-area: publicidad;
 }
 
@@ -42,7 +43,7 @@
     background-color: antiquewhite;
 }
 
-@media (min-width: 600px){
+@media (min-width: 650px){
     section h3{
         font-size: 45px;
     }

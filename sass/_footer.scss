@@ -1,0 +1,49 @@
+footer{
+    background-color: rgba(20, 90, 95, 0.771);
+    display: grid;
+    justify-items: center;
+    
+}
+.redes {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 2px inset black;
+    margin: 1rem;
+}
+.redes{
+    a{
+        padding: 5px;
+    }
+}
+.nosotros{
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 2px inset black;
+    margin: 1rem;
+
+}
+.nosotros{
+    grid-area: nosotros;
+}
+.redes{
+    grid-area: redes;
+}
+.grillaFooter{
+    display: grid;
+    grid-template-areas: 
+    "nosotros"
+    "redes"
+    ;
+}
+
+@media (min-width: 1024px){
+    .grillaFooter{
+        display: grid;
+    grid-template-areas: 
+    "nosotros  redes"
+    ;
+    }
+}

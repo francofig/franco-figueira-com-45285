@@ -4,19 +4,8 @@
   padding: 0;
 }
 
-footer {
-  background-color: rgba(20, 90, 95, 0.771);
-  display: flex;
-}
-
-.redes {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.redes a {
-  padding: 5px;
+.fondo:hover {
+  background-color: rgba(20, 90, 95, 0.055);
 }
 
 body {
@@ -221,9 +210,6 @@ body {
     margin-left: 0px;
     margin-right: 0px;
   }
-  .fondo:hover {
-    background-color: rgba(20, 90, 95, 0.055);
-  }
 }
 .redesSociales {
   grid-area: redesSociales;
@@ -271,9 +257,6 @@ body {
     border: none;
     padding: 20%;
     margin: 0;
-  }
-  .fondo:hover {
-    background-color: rgba(20, 90, 95, 0.055);
   }
 }
 .barras {
@@ -333,5 +316,51 @@ body {
     display: grid;
     align-items: center;
     grid-template-areas: "publicidad   publicidad   publicidad   publicidad" "barras       mancuernas   discos       otros";
+  }
+}
+footer {
+  background-color: rgba(20, 90, 95, 0.771);
+  display: grid;
+  justify-items: center;
+}
+
+.redes {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 2px inset black;
+  margin: 1rem;
+}
+
+.redes a {
+  padding: 5px;
+}
+
+.nosotros {
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 2px inset black;
+  margin: 1rem;
+}
+
+.nosotros {
+  grid-area: nosotros;
+}
+
+.redes {
+  grid-area: redes;
+}
+
+.grillaFooter {
+  display: grid;
+  grid-template-areas: "nosotros" "redes";
+}
+
+@media (min-width: 1024px) {
+  .grillaFooter {
+    display: grid;
+    grid-template-areas: "nosotros  redes";
   }
 }/*# sourceMappingURL=style.css.map */
